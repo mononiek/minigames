@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Games menu.unity
+    guid: 44aa89b22048c4142a275c9dee9135a2
+  - enabled: 1
+    path: Assets/Scenes/Start WAC.unity
+    guid: fbebc0983b4ce5b4c9dbfae7d90be476
+  - enabled: 1
+    path: Assets/Scenes/Whack A Clown.unity
+    guid: 2ba6ba933b6985042bbc64a3ea9f18d9
+  - enabled: 1
+    path: Assets/Scenes/Labyrinth.unity
+    guid: eef6334aff069e54fabedd8ff3f5c09f
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:

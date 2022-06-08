@@ -10,25 +10,24 @@ public class Characters : MonoBehaviour
    
     public GameObject[] characters;
 
-    public float HideTimer = 1.5f;
-
+    private float HideTimer = 3f;
 
     void Start()
     {
         HideCharacters();
-
-        transform.localPosition = myNweXYZPosition;
     }
 
     void Update()
     {
-        //HideTimer -= Time.deltaTime;
-        //if (HideTimer < 0f)
-        //{
-            //HideCharacters();
+        transform.localPosition = myNweXYZPosition;
 
-            //HideTimer = 1.5f;
-        //}
+        HideTimer -= Time.deltaTime;
+        if (HideTimer < 0f)
+        {
+            HideCharacters();
+
+            HideTimer = 3f;
+        }
     }
 
     public void HideCharacters()
@@ -39,6 +38,12 @@ public class Characters : MonoBehaviour
             transform.localPosition.y,
             hiddenZHeight
             );
+
+        foreach(GameObject character in characters)
+        {
+            character.GetComponent<BoxCollider2D>().enabled = false;
+            character.GetComponent<SpriteRenderer>().enabled = false;
+        }
     }
     public void ShowCharacters()
     {
@@ -49,5 +54,9 @@ public class Characters : MonoBehaviour
             visibleZHeight
             );
 
+        GameObject character = characters[Random.Range(0, characters.Length)];
+
+        character.GetComponent<BoxCollider2D>().enabled = true;
+        character.GetComponent<SpriteRenderer>().enabled = true;
     }
 }

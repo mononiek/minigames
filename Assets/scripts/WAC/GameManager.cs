@@ -5,21 +5,26 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public Text ScoreText;
+    public static int Score = 0;
+    
     public Text TimerText;
     public float GameTimer = 30f;
 
     public GameObject PlacesContainer;
     private Characters[] Places;
-    public float ShowTimer = 5f;
+    private float ShowTimer = 1.5f;
     
     void Start()
     {
         Places = PlacesContainer.GetComponentsInChildren<Characters>();
-        Debug.Log(Places.Length);
     }
 
     void Update()
     {
+
+        ScoreText.text = "Score: " + Score;
+
         GameTimer -= Time.deltaTime;
         if (GameTimer > 0f)
         {
@@ -30,7 +35,7 @@ public class GameManager : MonoBehaviour
             {
                 Places[Random.Range(0, Places.Length)].ShowCharacters();
 
-                ShowTimer = 5f;
+                ShowTimer = 1.5f;
             }
         }
         else
