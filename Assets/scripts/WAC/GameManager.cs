@@ -14,10 +14,22 @@ public class GameManager : MonoBehaviour
     public GameObject PlacesContainer;
     private Characters[] Places;
     private float ShowTimer = 1.5f;
+
+    private AudioSource Scarysound;
+    private bool playedsound = false;
+    public GameObject Jumpscare;
+    public float JumpscareTimer = 1f;
+
+    public GameObject GameOver;
+    public GameObject BackgroundMusic;
     
     void Start()
     {
+        Score = 0;
         Places = PlacesContainer.GetComponentsInChildren<Characters>();
+        Jumpscare.SetActive(false);
+        BackgroundMusic.SetActive(true);
+        Scarysound = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -40,7 +52,22 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            BackgroundMusic.SetActive(false);
+            Jumpscare.SetActive(true);
+            if (!playedsound)
+            {
+                Scarysound.Play();
+            }
+            playedsound = true;
+
+            JumpscareTimer -= Time.deltaTime;
+            if (JumpscareTimer < 0f)
+            {
+                Jumpscare.SetActive(false);
+            }
             TimerText.text = "GAME OVER";
+            GameOver.SetActive(true);
+            GameOver.GetComponent<GameOver>().UpdateText();
         }
     }
 }
