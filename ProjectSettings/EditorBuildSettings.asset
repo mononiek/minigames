@@ -18,7 +18,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Start LAB.unity
     guid: a80587da73204e648a65919ad4781dc6
   - enabled: 1
-    path: Assets/Scenes/Labyrinth.unity
+    path: Assets/Scenes/Labyrinth Level-1.unity
+    guid: 8b0638d4f65c5d6408ae76e79d1a6ccd
+  - enabled: 1
+    path: Assets/Scenes/Labyrinth Level-2.unity
     guid: eef6334aff069e54fabedd8ff3f5c09f
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity

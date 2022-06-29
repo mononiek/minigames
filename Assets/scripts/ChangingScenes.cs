@@ -25,6 +25,14 @@ public class ChangingScenes : MonoBehaviour
 
     public void Labyrinth()
     {
-        SceneManager.LoadScene("Labyrinth");
+        SceneManager.LoadScene("Labyrinth Level-1");
+    }
+    public void LabNextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
