@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Whack A Clown.unity
     guid: 2ba6ba933b6985042bbc64a3ea9f18d9
   - enabled: 1
+    path: Assets/Scenes/Start LAB.unity
+    guid: a80587da73204e648a65919ad4781dc6
+  - enabled: 1
     path: Assets/Scenes/Labyrinth.unity
     guid: eef6334aff069e54fabedd8ff3f5c09f
   - enabled: 0

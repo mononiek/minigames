@@ -10,7 +10,7 @@ public class Characters : MonoBehaviour
    
     public GameObject[] characters;
 
-    private float HideTimer = 3f;
+    private float HideTimer = 2f;
 
     void Start()
     {
@@ -26,7 +26,7 @@ public class Characters : MonoBehaviour
         {
             HideCharacters();
 
-            HideTimer = 3f;
+            HideTimer = 2f;
         }
     }
 

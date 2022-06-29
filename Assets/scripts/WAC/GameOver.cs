@@ -7,24 +7,16 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     public Text EndScoreText;
+    public Text HighScoreText;
 
     private void Start()
     {
         gameObject.SetActive(false);
     }
-    public void Restart()
-    {
-        SceneManager.LoadScene("Whack A Clown"); 
-    }
-
-    public void Back()
-    {
-        SceneManager.LoadScene("Games menu");
-    }
-
-        
+   
     public void UpdateText()
     {
+        HighScoreText.text = "Highscore: " + GameManager.HighScore;
         EndScoreText.text = "Score: " + GameManager.Score;
     }
 }

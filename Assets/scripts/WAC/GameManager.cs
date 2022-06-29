@@ -7,13 +7,14 @@ public class GameManager : MonoBehaviour
 {
     public Text ScoreText;
     public static int Score = 0;
+    public static int HighScore = 0;
     
     public Text TimerText;
     public float GameTimer = 30f;
 
     public GameObject PlacesContainer;
     private Characters[] Places;
-    private float ShowTimer = 1.5f;
+    private float ShowTimer = 0.75f;
 
     private AudioSource Scarysound;
     private bool playedsound = false;
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Score = 0;
+        HighScore = PlayerPrefs.GetInt("Highscore");
         Places = PlacesContainer.GetComponentsInChildren<Characters>();
         Jumpscare.SetActive(false);
         BackgroundMusic.SetActive(true);
@@ -47,7 +49,7 @@ public class GameManager : MonoBehaviour
             {
                 Places[Random.Range(0, Places.Length)].ShowCharacters();
 
-                ShowTimer = 1.5f;
+                ShowTimer = 0.75f;
             }
         }
         else
@@ -68,6 +70,12 @@ public class GameManager : MonoBehaviour
             TimerText.text = "GAME OVER";
             GameOver.SetActive(true);
             GameOver.GetComponent<GameOver>().UpdateText();
+
+            if (Score > HighScore)
+            {
+                HighScore = Score;
+                PlayerPrefs.SetInt("Highscore", HighScore);
+            }
         }
     }
 }
