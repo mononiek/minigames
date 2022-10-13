@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject PlacesContainer;
     private Characters[] Places;
-    private float ShowTimer = 0.75f;
+    private float ShowTimer = 1f;
 
     private AudioSource Scarysound;
     private bool playedsound = false;
@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
             {
                 Places[Random.Range(0, Places.Length)].ShowCharacters();
 
-                ShowTimer = 0.75f;
+                ShowTimer = 1f;
             }
         }
         else

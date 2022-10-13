@@ -34,7 +34,7 @@ public class Ball : MonoBehaviour
         if (_isFlat)
             tilt = Quaternion.Euler(90, 0, 0) * tilt;
 
-        _rigidbody.AddForce(tilt * 20);
+        _rigidbody.AddForce(tilt * 15);
         Debug.DrawRay(transform.position + Vector3.up, tilt, Color.blue);
     }
 

@@ -6,7 +6,7 @@ public class Characters : MonoBehaviour
 {
     public float visibleZHeight = 0.3f;
     public float hiddenZHeight = 1f;
-    private Vector3 myNweXYZPosition;
+    private Vector3 myNewXYZPosition;
    
     public GameObject[] characters;
 
@@ -19,7 +19,7 @@ public class Characters : MonoBehaviour
 
     void Update()
     {
-        transform.localPosition = myNweXYZPosition;
+        transform.localPosition = myNewXYZPosition;
 
         HideTimer -= Time.deltaTime;
         if (HideTimer < 0f)
@@ -32,7 +32,7 @@ public class Characters : MonoBehaviour
 
     public void HideCharacters()
     {
-        myNweXYZPosition = new Vector3
+        myNewXYZPosition = new Vector3
             (
             transform.localPosition.x,
             transform.localPosition.y,
@@ -47,7 +47,7 @@ public class Characters : MonoBehaviour
     }
     public void ShowCharacters()
     {
-        myNweXYZPosition = new Vector3
+        myNewXYZPosition = new Vector3
             (
             transform.localPosition.x,
             transform.localPosition.y,
