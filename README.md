@@ -23,4 +23,4 @@ en zo snel mogelijk in de vuilnisbak te krijgen en zo naar het volgende level te
 Je moet alleen wel uitkijken voor de zwarten vlakken want als je die raakt is het game over en moet je het level opnieuw doen.
 
 ## Link
-*[Google playstore](https://play.google.com/store/apps/details?id=com.NiekDollGames.ScareMeApp)
+[Google playstore](https://play.google.com/store/apps/details?id=com.NiekDollGames.ScareMeApp)
